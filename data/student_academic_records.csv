@@ -1,0 +1,201 @@
+student_id,name,gender,department,gpa,previous_qualification,fee_status,attendance_pct,lms_clicks,assignments_submitted,assignments_total,dropout_risk_flag
+STU1001,Ahmad Khan,M,Computer Science,3.65,A-Levels,Paid,92.5,340,8,8,0
+STU1002,Fatima Ali,F,Software Engineering,2.1,FSc Pre-Eng,Pending,58.0,110,4,8,1
+STU1003,Zainab Hassan,F,Data Science,3.88,A-Levels,Paid,96.0,480,8,8,0
+STU1004,Bilal Ahmed,M,Information Technology,1.85,FSc Pre-Eng,Overdue,45.0,75,2,8,1
+STU1005,Hamza Sheikh,M,Computer Science,2.95,FSc Pre-Eng,Paid,81.0,230,7,8,0
+STU1006,Sana Malik,F,Cyber Security,3.4,A-Levels,Paid,89.0,310,8,8,0
+STU1007,Usman Tariq,M,Software Engineering,1.6,FSc Pre-Eng,Overdue,40.0,50,1,8,1
+STU1008,Ayesha Siddiqui,F,Data Science,3.15,A-Levels,Paid,85.0,290,7,8,0
+STU1009,Muhammad Raza,M,Software Engineering,2.94,A-Levels,Paid,80.2,142,7,8,0
+STU1010,Hiba Khan,F,Computer Science,2.42,A-Levels,Paid,68.4,259,6,8,0
+STU1011,Nabeel Yousaf,M,Data Science,2.67,FSc Pre-Eng,Paid,67.6,206,5,8,0
+STU1012,Taha Sheikh,M,Data Science,3.23,ICS,Paid,88.7,283,8,8,0
+STU1013,Amna Gondal,F,Cyber Security,3.38,A-Levels,Paid,85.5,260,8,8,0
+STU1014,Anum Siddiqui,F,Artificial Intelligence,3.37,ICS,Pending,85.1,256,8,8,0
+STU1015,Abdullah Siddiqui,M,Information Technology,3.46,ICS,Paid,94.6,248,8,8,0
+STU1016,Bushra Raza,F,Computer Science,1.51,A-Levels,Overdue,52.7,80,3,8,1
+STU1017,Haris Qureshi,M,Software Engineering,2.87,ICS,Overdue,71.2,155,7,8,0
+STU1018,Mahnoor Ahmed,F,Computer Science,1.62,A-Levels,Paid,36.7,78,4,8,1
+STU1019,Sidra Khan,F,Artificial Intelligence,1.97,FSc Pre-Eng,Overdue,44.2,67,3,8,1
+STU1020,Nabeel Khan,M,Artificial Intelligence,1.71,ICS,Overdue,37.9,110,2,8,1
+STU1021,Omer Gondal,M,Software Engineering,3.22,FSc Pre-Eng,Paid,97.7,377,8,8,0
+STU1022,Raza Malik,M,Computer Science,1.73,DAE,Paid,38.4,114,3,8,1
+STU1023,Haris Akhtar,M,Cyber Security,1.96,DAE,Overdue,53.6,121,2,8,1
+STU1024,Kinza Siddiqui,F,Computer Science,3.22,A-Levels,Paid,90.5,332,7,8,0
+STU1025,Zubair Malik,M,Computer Science,2.62,ICS,Paid,73.3,258,5,8,0
+STU1026,Rimsha Rehman,F,Information Technology,3.54,A-Levels,Pending,88.0,459,7,8,0
+STU1027,Ali Javed,M,Artificial Intelligence,3.35,ICS,Paid,88.5,436,8,8,0
+STU1028,Rimsha Malik,F,Information Technology,2.83,FSc Pre-Eng,Paid,65.3,143,5,8,0
+STU1029,Waqas Rehman,M,Information Technology,1.36,A-Levels,Pending,35.1,79,2,8,1
+STU1030,Iqra Shah,F,Artificial Intelligence,3.37,DAE,Pending,81.1,497,7,8,0
+STU1031,Hiba Ahmed,F,Cyber Security,1.73,DAE,Overdue,36.5,95,0,8,1
+STU1032,Hassan Mughal,M,Computer Science,3.91,A-Levels,Paid,84.7,240,7,8,0
+STU1033,Anum Ansari,F,Artificial Intelligence,3.3,ICS,Paid,92.3,454,8,8,0
+STU1034,Nabeel Mughal,M,Cyber Security,2.8,FSc Pre-Eng,Paid,67.3,209,5,8,0
+STU1035,Danish Abbasi,M,Software Engineering,2.89,DAE,Overdue,81.8,255,5,8,0
+STU1036,Noor Qureshi,F,Data Science,2.52,FSc Pre-Eng,Paid,69.8,173,7,8,0
+STU1037,Khadija Raza,F,Cyber Security,2.05,DAE,Overdue,37.5,84,2,8,1
+STU1038,Haris Chaudhry,M,Artificial Intelligence,2.85,DAE,Overdue,66.9,158,7,8,0
+STU1039,Danish Yousaf,M,Cyber Security,3.45,A-Levels,Paid,97.1,240,8,8,0
+STU1040,Hussein Gondal,M,Cyber Security,3.14,DAE,Overdue,69.0,161,5,8,0
+STU1041,Maryam Chaudhry,F,Artificial Intelligence,2.06,ICS,Pending,56.9,64,1,8,1
+STU1042,Taha Ahmed,M,Information Technology,1.66,A-Levels,Pending,43.2,59,1,8,1
+STU1043,Hira Raza,F,Computer Science,2.72,ICS,Paid,81.7,257,6,8,0
+STU1044,Hussein Raza,M,Software Engineering,3.55,ICS,Pending,93.8,380,8,8,0
+STU1045,Taha Yousaf,M,Software Engineering,2.4,ICS,Paid,80.7,257,7,8,0
+STU1046,Danish Shah,M,Computer Science,3.88,ICS,Pending,93.7,373,8,8,0
+STU1047,Hira Javed,F,Artificial Intelligence,3.54,ICS,Paid,97.9,309,8,8,0
+STU1048,Saad Abbasi,M,Software Engineering,2.66,DAE,Overdue,72.5,174,7,8,0
+STU1049,Sadia Malik,F,Data Science,1.95,ICS,Pending,53.2,58,1,8,1
+STU1050,Shahid Mughal,M,Computer Science,1.78,DAE,Pending,54.4,79,3,8,1
+STU1051,Rimsha Qureshi,F,Artificial Intelligence,1.42,FSc Pre-Eng,Pending,56.7,119,4,8,1
+STU1052,Nabeel Qureshi,M,Information Technology,2.98,ICS,Pending,73.6,260,6,8,0
+STU1053,Shahid Siddiqui,M,Data Science,1.72,A-Levels,Overdue,51.9,65,3,8,1
+STU1054,Haris Mirza,M,Data Science,3.51,FSc Pre-Eng,Paid,82.9,329,7,8,0
+STU1055,Hira Farooq,F,Information Technology,3.54,DAE,Pending,97.2,519,7,8,0
+STU1056,Sundas Khan,F,Data Science,2.15,ICS,Pending,46.3,125,4,8,1
+STU1057,Shahid Bhatti,M,Data Science,3.47,DAE,Paid,92.9,427,8,8,0
+STU1058,Imran Farooq,M,Computer Science,2.42,DAE,Overdue,75.9,154,6,8,0
+STU1059,Ali Raza,M,Information Technology,2.67,ICS,Paid,80.0,191,6,8,0
+STU1060,Mahnoor Rehman,F,Computer Science,3.25,FSc Pre-Eng,Paid,98.2,240,7,8,0
+STU1061,Muhammad Mughal,M,Software Engineering,2.49,A-Levels,Paid,81.1,239,7,8,0
+STU1062,Mehak Chaudhry,F,Cyber Security,1.31,FSc Pre-Eng,Paid,35.7,69,4,8,1
+STU1063,Bushra Ansari,F,Computer Science,2.64,A-Levels,Paid,76.6,150,7,8,0
+STU1064,Danish Farooq,M,Information Technology,2.67,ICS,Paid,79.4,245,5,8,0
+STU1065,Mehak Siddiqui,F,Artificial Intelligence,3.62,A-Levels,Paid,92.4,495,8,8,0
+STU1066,Farah Raza,F,Data Science,3.56,A-Levels,Paid,94.3,511,8,8,0
+STU1067,Shahid Mirza,M,Software Engineering,3.41,DAE,Pending,85.3,361,7,8,0
+STU1068,Hassan Bhatti,M,Artificial Intelligence,2.59,DAE,Pending,73.1,245,6,8,0
+STU1069,Hassan Abbasi,M,Software Engineering,3.67,DAE,Paid,89.0,491,8,8,0
+STU1070,Mehak Siddiqui,F,Data Science,3.78,ICS,Paid,86.0,494,8,8,0
+STU1071,Shahid Raza,M,Artificial Intelligence,1.5,ICS,Paid,44.7,68,0,8,1
+STU1072,Haris Ahmed,M,Computer Science,3.0,ICS,Paid,66.7,123,7,8,0
+STU1073,Sundas Rehman,F,Information Technology,1.45,ICS,Pending,58.3,44,0,8,1
+STU1074,Omer Qureshi,M,Cyber Security,1.32,ICS,Paid,55.6,107,4,8,1
+STU1075,Kashif Javed,M,Information Technology,2.19,DAE,Paid,43.2,109,0,8,1
+STU1076,Mustafa Ansari,M,Data Science,3.64,FSc Pre-Eng,Pending,83.0,429,8,8,0
+STU1077,Iqra Ahmed,F,Software Engineering,2.76,ICS,Paid,76.7,187,7,8,0
+STU1078,Waqas Sheikh,M,Cyber Security,2.03,A-Levels,Overdue,36.9,51,2,8,1
+STU1079,Noor Siddiqui,F,Artificial Intelligence,1.7,ICS,Pending,48.3,40,4,8,1
+STU1080,Waqas Mirza,M,Cyber Security,3.97,ICS,Pending,95.9,514,7,8,0
+STU1081,Farah Ahmed,F,Software Engineering,3.13,DAE,Overdue,68.1,231,7,8,0
+STU1082,Mahnoor Rehman,F,Data Science,3.28,DAE,Paid,83.1,430,8,8,0
+STU1083,Sidra Ahmed,F,Information Technology,3.29,FSc Pre-Eng,Pending,94.7,483,7,8,0
+STU1084,Laiba Ahmed,F,Software Engineering,1.83,ICS,Overdue,55.5,56,2,8,1
+STU1085,Saad Siddiqui,M,Artificial Intelligence,3.7,DAE,Pending,95.2,301,8,8,0
+STU1086,Adeel Shah,M,Computer Science,2.49,A-Levels,Paid,79.1,247,7,8,0
+STU1087,Kinza Raza,F,Information Technology,3.64,DAE,Paid,87.3,480,8,8,0
+STU1088,Laiba Mirza,F,Cyber Security,3.44,ICS,Paid,91.2,470,8,8,0
+STU1089,Mehak Mirza,F,Cyber Security,2.07,DAE,Pending,61.5,60,4,8,1
+STU1090,Rimsha Shah,F,Computer Science,3.05,ICS,Pending,71.6,158,6,8,0
+STU1091,Omer Akhtar,M,Cyber Security,1.64,ICS,Paid,49.2,88,0,8,1
+STU1092,Hafsa Malik,F,Information Technology,2.72,ICS,Paid,66.4,204,7,8,0
+STU1093,Hira Rehman,F,Cyber Security,3.7,FSc Pre-Eng,Paid,97.5,336,7,8,0
+STU1094,Hussein Siddiqui,M,Software Engineering,3.84,ICS,Paid,85.6,411,8,8,0
+STU1095,Kashif Shah,M,Cyber Security,3.69,A-Levels,Pending,87.3,343,8,8,0
+STU1096,Zubair Siddiqui,M,Artificial Intelligence,3.21,ICS,Paid,95.3,367,8,8,0
+STU1097,Mehak Yousaf,F,Data Science,2.64,DAE,Paid,82.0,243,5,8,0
+STU1098,Taha Yousaf,M,Data Science,3.86,ICS,Pending,87.5,224,7,8,0
+STU1099,Iqra Bhatti,F,Cyber Security,2.9,ICS,Paid,76.5,155,7,8,0
+STU1100,Ali Abbasi,M,Information Technology,3.31,FSc Pre-Eng,Paid,97.3,387,8,8,0
+STU1101,Omer Farooq,M,Data Science,3.86,ICS,Paid,89.2,371,8,8,0
+STU1102,Mahnoor Qureshi,F,Software Engineering,3.83,DAE,Paid,80.3,494,7,8,0
+STU1103,Anum Yousaf,F,Information Technology,2.78,ICS,Paid,75.5,203,7,8,0
+STU1104,Hassan Siddiqui,M,Artificial Intelligence,3.24,ICS,Paid,80.7,472,7,8,0
+STU1105,Adeel Qureshi,M,Information Technology,2.99,DAE,Paid,81.1,227,7,8,0
+STU1106,Waqas Sheikh,M,Information Technology,3.5,DAE,Paid,88.4,340,8,8,0
+STU1107,Sidra Gondal,F,Computer Science,3.3,DAE,Pending,96.1,452,7,8,0
+STU1108,Imran Khan,M,Computer Science,1.99,ICS,Pending,40.5,127,4,8,1
+STU1109,Farhan Qureshi,M,Cyber Security,1.34,FSc Pre-Eng,Pending,38.5,62,1,8,1
+STU1110,Muhammad Gondal,M,Software Engineering,3.24,ICS,Pending,94.1,489,7,8,0
+STU1111,Shahid Siddiqui,M,Data Science,3.16,FSc Pre-Eng,Pending,65.7,253,6,8,0
+STU1112,Maryam Ahmed,F,Information Technology,2.79,DAE,Pending,80.5,138,5,8,0
+STU1113,Amna Qureshi,F,Computer Science,2.87,A-Levels,Paid,77.1,217,7,8,0
+STU1114,Aliza Akhtar,F,Cyber Security,1.31,DAE,Paid,52.7,128,4,8,1
+STU1115,Waqas Siddiqui,M,Software Engineering,1.6,DAE,Overdue,54.7,70,3,8,1
+STU1116,Hafsa Rehman,F,Computer Science,3.28,FSc Pre-Eng,Pending,94.0,286,7,8,0
+STU1117,Noor Shah,F,Data Science,1.8,DAE,Overdue,44.5,103,4,8,1
+STU1118,Hussein Gondal,M,Cyber Security,1.77,ICS,Paid,56.8,101,4,8,1
+STU1119,Imran Raza,M,Computer Science,2.65,A-Levels,Paid,70.8,121,5,8,0
+STU1120,Raza Javed,M,Computer Science,3.62,A-Levels,Paid,87.1,452,8,8,0
+STU1121,Iqra Mirza,F,Cyber Security,3.8,FSc Pre-Eng,Paid,80.9,261,8,8,0
+STU1122,Sundas Mughal,F,Information Technology,3.61,DAE,Pending,86.6,276,8,8,0
+STU1123,Kinza Abbasi,F,Computer Science,1.25,A-Levels,Pending,40.5,57,1,8,1
+STU1124,Iqra Mirza,F,Computer Science,2.54,FSc Pre-Eng,Pending,71.5,178,7,8,0
+STU1125,Mahnoor Javed,F,Artificial Intelligence,3.94,FSc Pre-Eng,Pending,96.4,514,8,8,0
+STU1126,Laiba Abbasi,F,Computer Science,1.37,DAE,Pending,60.6,88,2,8,1
+STU1127,Waqas Yousaf,M,Information Technology,1.95,FSc Pre-Eng,Pending,41.0,129,1,8,1
+STU1128,Kashif Sheikh,M,Cyber Security,3.97,A-Levels,Paid,92.3,295,8,8,0
+STU1129,Haris Ansari,M,Software Engineering,3.82,A-Levels,Pending,89.4,508,8,8,0
+STU1130,Hira Qureshi,F,Information Technology,2.64,FSc Pre-Eng,Pending,69.7,134,6,8,0
+STU1131,Saad Siddiqui,M,Information Technology,3.43,FSc Pre-Eng,Paid,92.2,266,8,8,0
+STU1132,Nabeel Yousaf,M,Artificial Intelligence,2.8,A-Levels,Paid,81.3,235,5,8,0
+STU1133,Mahnoor Akhtar,F,Artificial Intelligence,3.55,A-Levels,Paid,88.3,487,8,8,0
+STU1134,Iqra Javed,F,Information Technology,3.7,ICS,Pending,86.4,388,7,8,0
+STU1135,Iqra Raza,F,Artificial Intelligence,3.73,A-Levels,Paid,97.4,378,8,8,0
+STU1136,Saad Farooq,M,Information Technology,3.06,ICS,Paid,77.6,254,5,8,0
+STU1137,Kinza Gondal,F,Computer Science,3.37,ICS,Paid,98.0,468,8,8,0
+STU1138,Omer Malik,M,Data Science,2.04,FSc Pre-Eng,Overdue,58.9,34,2,8,1
+STU1139,Imran Javed,M,Software Engineering,1.97,A-Levels,Overdue,56.8,51,3,8,1
+STU1140,Nabeel Mughal,M,Data Science,2.65,DAE,Paid,78.7,240,5,8,0
+STU1141,Farah Siddiqui,F,Information Technology,2.73,ICS,Pending,67.8,171,7,8,0
+STU1142,Haris Ahmed,M,Artificial Intelligence,2.48,DAE,Paid,79.4,151,6,8,0
+STU1143,Abdullah Raza,M,Information Technology,3.93,A-Levels,Paid,95.5,398,7,8,0
+STU1144,Taha Akhtar,M,Data Science,1.57,A-Levels,Pending,35.8,42,2,8,1
+STU1145,Omer Ahmed,M,Data Science,1.67,DAE,Pending,51.6,40,0,8,1
+STU1146,Noor Abbasi,F,Software Engineering,3.54,ICS,Paid,95.1,454,7,8,0
+STU1147,Amna Farooq,F,Computer Science,3.2,A-Levels,Paid,86.7,512,8,8,0
+STU1148,Kashif Gondal,M,Computer Science,1.24,FSc Pre-Eng,Pending,45.4,77,2,8,1
+STU1149,Danish Malik,M,Data Science,1.94,A-Levels,Pending,44.0,35,2,8,1
+STU1150,Sundas Chaudhry,F,Software Engineering,3.36,FSc Pre-Eng,Paid,95.0,241,8,8,0
+STU1151,Sidra Rehman,F,Data Science,3.89,FSc Pre-Eng,Paid,80.9,389,8,8,0
+STU1152,Laiba Javed,F,Artificial Intelligence,3.35,DAE,Paid,93.1,408,8,8,0
+STU1153,Mahnoor Shah,F,Cyber Security,3.28,A-Levels,Paid,86.2,371,8,8,0
+STU1154,Sadia Siddiqui,F,Data Science,3.13,DAE,Paid,75.5,231,6,8,0
+STU1155,Hassan Javed,M,Data Science,3.69,A-Levels,Paid,94.8,237,8,8,0
+STU1156,Danish Gondal,M,Information Technology,3.56,FSc Pre-Eng,Pending,87.0,447,7,8,0
+STU1157,Kashif Gondal,M,Information Technology,3.29,ICS,Pending,94.0,475,8,8,0
+STU1158,Haris Raza,M,Artificial Intelligence,1.49,DAE,Pending,59.7,92,1,8,1
+STU1159,Sadia Siddiqui,F,Computer Science,2.84,ICS,Paid,69.9,196,5,8,0
+STU1160,Danish Akhtar,M,Software Engineering,1.44,FSc Pre-Eng,Overdue,48.3,76,4,8,1
+STU1161,Imran Malik,M,Computer Science,1.92,ICS,Pending,49.2,128,3,8,1
+STU1162,Omer Mirza,M,Artificial Intelligence,2.81,FSc Pre-Eng,Pending,67.2,166,5,8,0
+STU1163,Kinza Ahmed,F,Computer Science,3.46,A-Levels,Paid,93.5,397,8,8,0
+STU1164,Khadija Farooq,F,Data Science,2.47,A-Levels,Paid,75.9,159,5,8,0
+STU1165,Farah Ahmed,F,Computer Science,1.97,FSc Pre-Eng,Pending,42.1,56,4,8,1
+STU1166,Sidra Abbasi,F,Artificial Intelligence,3.85,ICS,Pending,87.7,452,7,8,0
+STU1167,Abdullah Siddiqui,M,Information Technology,3.69,DAE,Paid,85.9,383,8,8,0
+STU1168,Danish Akhtar,M,Cyber Security,3.3,FSc Pre-Eng,Paid,88.5,292,7,8,0
+STU1169,Bushra Mughal,F,Information Technology,2.13,A-Levels,Overdue,54.5,54,1,8,1
+STU1170,Iqra Rehman,F,Computer Science,3.17,FSc Pre-Eng,Pending,68.7,210,5,8,0
+STU1171,Saad Rehman,M,Cyber Security,3.08,DAE,Paid,72.3,187,7,8,0
+STU1172,Bushra Gondal,F,Computer Science,2.56,DAE,Paid,74.4,138,6,8,0
+STU1173,Sidra Raza,F,Cyber Security,1.59,FSc Pre-Eng,Paid,56.5,73,4,8,1
+STU1174,Mustafa Mughal,M,Cyber Security,3.23,DAE,Paid,93.6,462,8,8,0
+STU1175,Farhan Mughal,M,Data Science,1.94,A-Levels,Pending,43.1,73,4,8,1
+STU1176,Farah Abbasi,F,Information Technology,3.29,FSc Pre-Eng,Pending,87.9,377,7,8,0
+STU1177,Anum Yousaf,F,Cyber Security,2.54,A-Levels,Paid,75.7,217,5,8,0
+STU1178,Ali Yousaf,M,Artificial Intelligence,3.45,FSc Pre-Eng,Pending,82.9,324,8,8,0
+STU1179,Hiba Qureshi,F,Cyber Security,3.73,A-Levels,Paid,90.0,380,8,8,0
+STU1180,Sidra Gondal,F,Artificial Intelligence,3.17,ICS,Overdue,69.7,196,5,8,0
+STU1181,Iqra Ansari,F,Artificial Intelligence,2.85,DAE,Paid,80.9,190,6,8,0
+STU1182,Raza Farooq,M,Information Technology,2.0,DAE,Overdue,42.8,66,0,8,1
+STU1183,Sundas Ansari,F,Software Engineering,2.51,ICS,Overdue,75.5,181,5,8,0
+STU1184,Kashif Bhatti,M,Artificial Intelligence,3.46,A-Levels,Pending,89.0,290,7,8,0
+STU1185,Waqas Rehman,M,Information Technology,3.72,A-Levels,Pending,97.3,265,8,8,0
+STU1186,Abdullah Shah,M,Software Engineering,1.39,FSc Pre-Eng,Pending,55.2,67,0,8,1
+STU1187,Saad Yousaf,M,Cyber Security,3.99,FSc Pre-Eng,Pending,90.3,472,8,8,0
+STU1188,Anum Ansari,F,Computer Science,2.92,ICS,Paid,77.2,123,7,8,0
+STU1189,Iqra Yousaf,F,Artificial Intelligence,2.91,A-Levels,Paid,71.9,229,7,8,0
+STU1190,Mahnoor Javed,F,Artificial Intelligence,1.68,FSc Pre-Eng,Overdue,60.3,30,2,8,1
+STU1191,Hira Abbasi,F,Cyber Security,2.95,FSc Pre-Eng,Paid,66.1,150,6,8,0
+STU1192,Sadia Javed,F,Artificial Intelligence,3.15,ICS,Paid,71.2,176,5,8,0
+STU1193,Shahid Qureshi,M,Information Technology,3.13,ICS,Pending,77.9,175,5,8,0
+STU1194,Kashif Siddiqui,M,Cyber Security,1.31,ICS,Pending,57.4,94,1,8,1
+STU1195,Farhan Akhtar,M,Information Technology,2.79,FSc Pre-Eng,Paid,80.3,234,5,8,0
+STU1196,Hafsa Akhtar,F,Information Technology,3.57,DAE,Paid,95.3,231,8,8,0
+STU1197,Mustafa Yousaf,M,Computer Science,3.25,FSc Pre-Eng,Paid,98.9,255,8,8,0
+STU1198,Laiba Chaudhry,F,Software Engineering,1.58,DAE,Pending,58.5,78,3,8,1
+STU1199,Noor Chaudhry,F,Cyber Security,3.98,DAE,Paid,95.9,231,8,8,0
+STU1200,Sidra Javed,F,Software Engineering,3.42,A-Levels,Pending,97.8,277,7,8,0

@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPredict - Big Data Analytics & Dropout Prediction</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --ep-primary: #0f2744;
+            --ep-primary-light: #1b3d66;
+            --ep-accent: #0284c7;
+            --ep-danger: #dc2626;
+            --ep-warning: #f59e0b;
+            --ep-success: #10b981;
+            --ep-bg: #f8fafc;
+            --ep-card-bg: #ffffff;
+        }
+
+        body {
+            background-color: var(--ep-bg);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: #1e293b;
+            min-height: 100vh;
+        }
+
+        .navbar-custom {
+            background: linear-gradient(135deg, #0f2744 0%, #1e3a8a 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-card .card-icon {
+            font-size: 2.5rem;
+            opacity: 0.2;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .badge-risk-high {
+            background-color: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+            font-weight: 600;
+        }
+
+        .badge-risk-safe {
+            background-color: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            font-weight: 600;
+        }
+
+        .badge-fee-paid {
+            background-color: #e0f2fe;
+            color: #0369a1;
+        }
+
+        .badge-fee-pending {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .badge-fee-overdue {
+            background-color: #fce7f3;
+            color: #9d174d;
+        }
+
+        .table-responsive {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .table th {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background-color: #0f2744;
+            color: #ffffff;
+            border: none;
+            vertical-align: middle;
+        }
+
+        .table td {
+            vertical-align: middle;
+            font-size: 0.92rem;
+        }
+
+        .progress-slim {
+            height: 6px;
+            border-radius: 4px;
+        }
+
+        .risk-gauge-container {
+            width: 100%;
+            height: 14px;
+            background-color: #e2e8f0;
+            border-radius: 7px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .risk-gauge-bar {
+            height: 100%;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .chart-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            background: #fff;
+        }
+
+        .tab-content {
+            padding-top: 15px;
+        }
+
+        .toast-container {
+            z-index: 1090;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <nav class="navbar navbar-dark navbar-custom px-3 px-lg-4 py-2 sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+                <i class="bi bi-mortarboard-fill fs-3 text-warning"></i>
+                <div>
+                    <span class="fs-4">EduPredict</span>
+                    <span class="d-none d-md-inline-block badge bg-light text-dark ms-2 fs-7 align-middle">v2.0 Big Data Analytics</span>
+                </div>
+            </a>
+            <div class="d-flex align-items-center gap-2">
+                <span class="d-none d-lg-inline text-light opacity-75 small me-2">Aptech Final Semester eProject</span>
+                <button class="btn btn-warning btn-sm fw-semibold d-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#predictionSimulatorModal">
+                    <i class="bi bi-lightning-charge-fill"></i> AI Predictor
+                </button>
+                <button class="btn btn-outline-light btn-sm d-flex align-items-center gap-1" data-bs-toggle="modal" data-bs-target="#addStudentModal">
+                    <i class="bi bi-person-plus-fill"></i> Add Student
+                </button>
+                <button class="btn btn-outline-info btn-sm" id="btnRetrainModel" title="Retrain Random Forest Model">
+                    <i class="bi bi-arrow-repeat" id="retrainSpinner"></i> Retrain
+                </button>
+                <a href="/api/export/csv" class="btn btn-outline-light btn-sm" title="Export Dataset to CSV">
+                    <i class="bi bi-cloud-arrow-down-fill"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-3 px-lg-4 my-4">
+
+        <!-- Top Alerts & Model Metrics Banner -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="alert alert-primary bg-white border-0 shadow-sm d-flex flex-wrap justify-content-between align-items-center py-2 px-3 mb-0">
+                    <div class="d-flex align-items-center gap-2 my-1">
+                        <span class="badge bg-primary px-2 py-1"><i class="bi bi-cpu-fill"></i> ML Model Active</span>
+                        <span class="text-secondary small">
+                            <strong>{{ metrics.model_name if metrics else 'Random Forest Classifier' }}</strong> | 
+                            Trained Accuracy: <strong class="text-success">{{ (metrics.accuracy * 100)|round(1) if metrics else 100.0 }}%</strong> | 
+                            F1-Score: <strong>{{ (metrics.f1_score * 100)|round(1) if metrics else 100.0 }}%</strong>
+                        </span>
+                    </div>
+                    <div class="text-secondary small my-1">
+                        <i class="bi bi-clock-history"></i> Last Training: <span>{{ metrics.training_date if metrics else 'Just now' }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPI Metric Summary Cards -->
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card stat-card bg-primary text-white p-3 h-100">
+                    <i class="bi bi-people-fill card-icon"></i>
+                    <div class="text-white-50 text-uppercase fw-bold small">Total Enrolled</div>
+                    <h2 class="display-6 fw-bold mb-1" id="statTotal">{{ total }}</h2>
+                    <div class="small text-white-50">Synchronized across Academic & LMS records</div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card stat-card bg-danger text-white p-3 h-100">
+                    <i class="bi bi-exclamation-octagon-fill card-icon"></i>
+                    <div class="text-white-50 text-uppercase fw-bold small">High Dropout Risk</div>
+                    <div class="d-flex align-items-baseline gap-2 mb-1">
+                        <h2 class="display-6 fw-bold mb-0" id="statAtRisk">{{ at_risk }}</h2>
+                        <span class="badge bg-white text-danger fw-bold" id="statRiskPct">{{ at_risk_pct }}%</span>
+                    </div>
+                    <div class="small text-white-50">Requires urgent academic counseling</div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card stat-card bg-success text-white p-3 h-100">
+                    <i class="bi bi-calendar-check-fill card-icon"></i>
+                    <div class="text-white-50 text-uppercase fw-bold small">Campus Avg Attendance</div>
+                    <h2 class="display-6 fw-bold mb-1" id="statAvgAtt">{{ avg_att }}%</h2>
+                    <div class="small text-white-50">LMS & Classroom combined metric</div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card stat-card bg-info text-white p-3 h-100">
+                    <i class="bi bi-graph-up-arrow card-icon"></i>
+                    <div class="text-white-50 text-uppercase fw-bold small">Campus Avg GPA</div>
+                    <h2 class="display-6 fw-bold mb-1" id="statAvgGpa">{{ avg_gpa }}</h2>
+                    <div class="small text-white-50">Cumulative Grade Point Average (0-4.00)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visual Analytics Section (Charts) -->
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-lg-8">
+                <div class="card chart-card p-3 h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="fw-bold mb-0 text-dark"><i class="bi bi-bar-chart-fill text-primary me-2"></i>Department-wise Risk Breakdown</h5>
+                        <span class="badge bg-light text-secondary border">Academic Enrollment</span>
+                    </div>
+                    <div style="height: 280px; position: relative;">
+                        <canvas id="deptChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+                <div class="card chart-card p-3 h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="fw-bold mb-0 text-dark"><i class="bi bi-pie-chart-fill text-danger me-2"></i>Risk Ratio</h5>
+                        <span class="badge bg-light text-secondary border">Class Distribution</span>
+                    </div>
+                    <div style="height: 280px; position: relative;" class="d-flex align-items-center justify-content-center">
+                        <canvas id="riskDonutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Data Analytics Table & Filter Panel -->
+        <div class="card chart-card p-3 p-lg-4 mb-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <div>
+                    <h4 class="fw-bold mb-0 text-dark">
+                        <i class="bi bi-table text-primary me-2"></i>Student Performance & Behavioral Records
+                    </h4>
+                    <p class="text-muted small mb-0">Real-time Big Data Ingestion from LMS Logs and Academic Registrars</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-secondary" id="visibleCountBadge">Showing {{ total }} students</span>
+                </div>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="row g-2 mb-3">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search by ID, Name...">
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <select id="filterDepartment" class="form-select form-select-sm">
+                        <option value="">All Departments</option>
+                        {% for dept in departments %}
+                        <option value="{{ dept }}">{{ dept }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2">
+                    <select id="filterRisk" class="form-select form-select-sm">
+                        <option value="">All Risk Statuses</option>
+                        <option value="high">High Dropout Risk</option>
+                        <option value="safe">On Track</option>
+                    </select>
+                </div>
+                <div class="col-6 col-md-2 col-lg-2">
+                    <select id="filterFee" class="form-select form-select-sm">
+                        <option value="">All Fee Statuses</option>
+                        <option value="Paid">Paid</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Overdue">Overdue</option>
+                    </select>
+                </div>
+                <div class="col-6 col-md-2 col-lg-2">
+                    <button id="btnResetFilters" class="btn btn-outline-secondary btn-sm w-100">
+                        <i class="bi bi-arrow-counterclockwise"></i> Reset Filters
+                    </button>
+                </div>
+            </div>
+
+            <!-- Student Table -->
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0" id="studentsTable">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Department</th>
+                            <th>GPA</th>
+                            <th>Attendance</th>
+                            <th>LMS Clicks</th>
+                            <th>Assignments</th>
+                            <th>Fee Status</th>
+                            <th>Dropout Risk</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentsTableBody">
+                        {% for s in students %}
+                        <tr id="row-{{ s.student_id }}">
+                            <td class="fw-bold text-primary">{{ s.student_id }}</td>
+                            <td>
+                                <div>{{ s.name }}</div>
+                                <span class="badge bg-light text-muted border small">{{ s.gender }}</span>
+                            </td>
+                            <td>
+                                <div>{{ s.department }}</div>
+                                <span class="badge bg-light text-secondary border small">{{ s.course_code or 'CS-401' }}</span>
+                            </td>
+                            <td>
+                                <span class="fw-bold {% if s.gpa < 2.2 %}text-danger{% elif s.gpa < 2.8 %}text-warning{% else %}text-success{% endif %}">
+                                    {{ "%.2f"|format(s.gpa) }}
+                                </span>
+                            </td>
+                            <td>
+                                <div>{{ "%.1f"|format(s.attendance_pct) }}%</div>
+                                <div class="progress progress-slim mt-1">
+                                    <div class="progress-bar {% if s.attendance_pct < 60 %}bg-danger{% elif s.attendance_pct < 75 %}bg-warning{% else %}bg-success{% endif %}" 
+                                         role="progressbar" style="width: {{ s.attendance_pct }}%"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="badge bg-light text-dark border">
+                                    <i class="bi bi-mouse me-1"></i>{{ s.lms_clicks }}
+                                </span>
+                            </td>
+                            <td>
+                                <span>{{ s.assignments_submitted }} / {{ s.assignments_total }}</span>
+                            </td>
+                            <td>
+                                {% if s.fee_status == 'Paid' %}
+                                    <span class="badge badge-fee-paid">Paid</span>
+                                {% elif s.fee_status == 'Pending' %}
+                                    <span class="badge badge-fee-pending">Pending</span>
+                                {% else %}
+                                    <span class="badge badge-fee-overdue">Overdue</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if s.dropout_risk_flag == 1 or s.attendance_pct < 60 %}
+                                    <span class="badge badge-risk-high px-2 py-1">
+                                        <i class="bi bi-exclamation-triangle-fill me-1"></i>High Risk
+                                    </span>
+                                {% else %}
+                                    <span class="badge badge-risk-safe px-2 py-1">
+                                        <i class="bi bi-check-circle-fill me-1"></i>On Track
+                                    </span>
+                                {% endif %}
+                            </td>
+                            <td class="text-center">
+                                <div class="btn-group btn-group-sm">
+                                    <button class="btn btn-outline-primary btn-sm btn-view-student" data-id="{{ s.student_id }}" title="View Risk Analytics">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm btn-edit-student" data-id="{{ s.student_id }}" title="Edit Student">
+                                        <i class="bi bi-pencil"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger btn-sm btn-delete-student" data-id="{{ s.student_id }}" title="Delete Student">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Empty State -->
+            <div id="noResultsState" class="text-center py-5 d-none">
+                <i class="bi bi-search fs-1 text-muted"></i>
+                <h5 class="mt-2 text-muted">No student records match the selected filters.</h5>
+                <button class="btn btn-sm btn-outline-primary mt-2" onclick="resetFilters()">Clear Filters</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- AI PREDICTION SIMULATOR MODAL -->
+    <div class="modal fade" id="predictionSimulatorModal" tabindex="-1" aria-labelledby="predictionSimulatorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="predictionSimulatorModalLabel">
+                        <i class="bi bi-cpu-fill text-warning me-2"></i>Real-Time Student Dropout Risk Predictor
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold">Student Name (Optional)</label>
+                            <input type="text" id="simName" class="form-control form-control-sm" placeholder="e.g. Taha Siddiqui">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold">Department</label>
+                            <select id="simDept" class="form-select form-select-sm">
+                                {% for dept in departments %}
+                                <option value="{{ dept }}">{{ dept }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label small fw-bold">GPA (0.00 - 4.00) <span class="text-danger">*</span></label>
+                            <input type="number" id="simGpa" class="form-control form-control-sm" step="0.01" min="0" max="4.0" value="2.35">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label small fw-bold">Attendance % (0-100) <span class="text-danger">*</span></label>
+                            <input type="number" id="simAttendance" class="form-control form-control-sm" step="0.5" min="0" max="100" value="65.0">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label small fw-bold">LMS Clicks <span class="text-danger">*</span></label>
+                            <input type="number" id="simClicks" class="form-control form-control-sm" min="0" value="120">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label small fw-bold">Assignments Done <span class="text-danger">*</span></label>
+                            <input type="number" id="simAssignments" class="form-control form-control-sm" min="0" max="8" value="4">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold">Fee Payment Status</label>
+                            <select id="simFeeStatus" class="form-select form-select-sm">
+                                <option value="Paid">Paid</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Overdue">Overdue</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-end">
+                            <button id="btnRunPrediction" class="btn btn-primary w-100 fw-bold d-flex align-items-center justify-content-center gap-2">
+                                <i class="bi bi-lightning-charge-fill text-warning"></i> Run AI Model Inference
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Prediction Result Panel -->
+                    <div id="simResultContainer" class="mt-4 p-3 rounded border d-none">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="badge fs-6 px-3 py-2" id="simRiskBadge">High Risk</span>
+                                <h6 class="mb-0 fw-bold" id="simRecommendationText">HIGH RISK of Academic Failure</h6>
+                            </div>
+                            <div class="text-end">
+                                <span class="small text-muted">Dropout Probability:</span>
+                                <div class="fs-5 fw-bold" id="simProbabilityText">85.0%</div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar Gauge -->
+                        <div class="risk-gauge-container my-2">
+                            <div class="risk-gauge-bar" id="simRiskGauge" style="width: 85%; background-color: var(--ep-danger);"></div>
+                        </div>
+
+                        <!-- Interventions / Actionable AI Strategies -->
+                        <div class="mt-3">
+                            <h6 class="fw-bold small text-uppercase text-secondary mb-2">
+                                <i class="bi bi-shield-check me-1"></i>Prescriptive Interventions & Recommendations:
+                            </h6>
+                            <ul class="list-group list-group-flush small" id="simInterventionsList">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADD STUDENT MODAL -->
+    <div class="modal fade" id="addStudentModal" tabindex="-1" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold" id="addStudentModalLabel"><i class="bi bi-person-plus-fill text-info me-2"></i>Enroll New Student</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="addStudentForm">
+                    <div class="modal-body">
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <label class="form-label small fw-bold">Student ID</label>
+                                <input type="text" id="addStuId" class="form-control form-control-sm" placeholder="e.g. STU1201" required>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small fw-bold">Full Name</label>
+                                <input type="text" id="addName" class="form-control form-control-sm" placeholder="e.g. Asad Malik" required>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small fw-bold">Gender</label>
+                                <select id="addGender" class="form-select form-select-sm">
+                                    <option value="M">Male (M)</option>
+                                    <option value="F">Female (F)</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small fw-bold">Department</label>
+                                <select id="addDept" class="form-select form-select-sm" required>
+                                    {% for dept in departments %}
+                                    <option value="{{ dept }}">{{ dept }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small fw-bold">Previous Qualification</label>
+                                <select id="addQual" class="form-select form-select-sm">
+                                    <option value="FSc Pre-Eng">FSc Pre-Eng</option>
+                                    <option value="A-Levels">A-Levels</option>
+                                    <option value="ICS">ICS</option>
+                                    <option value="DAE">DAE</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small fw-bold">Fee Status</label>
+                                <select id="addFee" class="form-select form-select-sm">
+                                    <option value="Paid">Paid</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Overdue">Overdue</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <label class="form-label small fw-bold">GPA (0-4.0)</label>
+                                <input type="number" id="addGpa" class="form-control form-control-sm" step="0.01" min="0" max="4.0" value="3.00" required>
+                            </div>
+                            <div class="col-4">
+                                <label class="form-label small fw-bold">Attendance %</label>
+                                <input type="number" id="addAtt" class="form-control form-control-sm" step="0.1" min="0" max="100" value="80.0" required>
+                            </div>
+                            <div class="col-4">
+                                <label class="form-label small fw-bold">LMS Clicks</label>
+                                <input type="number" id="addClicks" class="form-control form-control-sm" min="0" value="200">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small fw-bold">Assignments Submitted</label>
+                                <input type="number" id="addSubmissions" class="form-control form-control-sm" min="0" max="8" value="6">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label small fw-bold">Course Code</label>
+                                <input type="text" id="addCourse" class="form-control form-control-sm" value="CS-401">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-sm fw-bold">Save Student Record</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT DETAILS MODAL -->
+    <div class="modal fade" id="studentDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold"><i class="bi bi-person-badge-fill me-2"></i>Student Academic & Behavioral Profile</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <h4 class="fw-bold mb-0" id="detailName">Ahmad Khan</h4>
+                            <span class="text-muted small" id="detailId">STU1001</span> | 
+                            <span class="text-muted small" id="detailDept">Computer Science</span>
+                        </div>
+                        <span class="badge px-3 py-2 fs-6" id="detailRiskBadge">On Track</span>
+                    </div>
+
+                    <div class="row g-2 mb-3 text-center">
+                        <div class="col-3">
+                            <div class="p-2 border rounded bg-light">
+                                <div class="small text-muted">GPA</div>
+                                <div class="fw-bold fs-5" id="detailGpa">3.65</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="p-2 border rounded bg-light">
+                                <div class="small text-muted">Attendance</div>
+                                <div class="fw-bold fs-5" id="detailAtt">92.5%</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="p-2 border rounded bg-light">
+                                <div class="small text-muted">LMS Clicks</div>
+                                <div class="fw-bold fs-5" id="detailClicks">340</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="p-2 border rounded bg-light">
+                                <div class="small text-muted">Coursework</div>
+                                <div class="fw-bold fs-5" id="detailAssignments">8 / 8</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="small text-muted mb-1">Fee Payment Status: <strong id="detailFeeStatus">Paid</strong></div>
+                        <div class="small text-muted">Prior Qualification: <strong id="detailQual">A-Levels</strong></div>
+                    </div>
+
+                    <div>
+                        <h6 class="fw-bold small text-uppercase text-secondary mb-2">Intervention Strategy</h6>
+                        <ul class="list-group list-group-flush small" id="detailInterventionsList">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast align-items-center text-white bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="toastMessage">Action completed successfully.</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Application Dashboard Logic -->
+    <script>
+        // Store passed analytics and students
+        const initialStudents = {{ students | tojson }};
+        const deptStats = {{ dept_stats | tojson }};
+        const initialAtRisk = {{ at_risk }};
+        const initialSafe = {{ safe }};
+
+        let deptChartInstance = null;
+        let riskDonutChartInstance = null;
+
+        // Initialize Charts
+        function initCharts() {
+            // Department Chart
+            const deptLabels = Object.keys(deptStats);
+            const deptTotals = deptLabels.map(k => deptStats[k].total);
+            const deptRisks = deptLabels.map(k => deptStats[k].at_risk);
+
+            const ctxDept = document.getElementById('deptChart').getContext('2d');
+            deptChartInstance = new Chart(ctxDept, {
+                type: 'bar',
+                data: {
+                    labels: deptLabels,
+                    datasets: [
+                        {
+                            label: 'Total Students',
+                            data: deptTotals,
+                            backgroundColor: '#3b82f6',
+                            borderRadius: 6
+                        },
+                        {
+                            label: 'At-Risk Students',
+                            data: deptRisks,
+                            backgroundColor: '#ef4444',
+                            borderRadius: 6
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' }
+                    },
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+
+            // Donut Chart
+            const ctxDonut = document.getElementById('riskDonutChart').getContext('2d');
+            riskDonutChartInstance = new Chart(ctxDonut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['On Track', 'High Risk'],
+                    datasets: [{
+                        data: [initialSafe, initialAtRisk],
+                        backgroundColor: ['#10b981', '#ef4444'],
+                        borderWidth: 2,
+                        hoverOffset: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    },
+                    cutout: '68%'
+                }
+            });
+        }
+
+        // Show Toast Notification
+        function showToast(message, type = 'info') {
+            const toastEl = document.getElementById('liveToast');
+            const toastBody = document.getElementById('toastMessage');
+            toastBody.textContent = message;
+            toastEl.className = `toast align-items-center text-white bg-${type === 'error' ? 'danger' : (type === 'success' ? 'success' : 'dark')} border-0`;
+            const toast = new bootstrap.Toast(toastEl, { delay: 4000 });
+            toast.show();
+        }
+
+        // Filter Table Rows
+        function applyFilters() {
+            const searchVal = document.getElementById('searchInput').value.toLowerCase().trim();
+            const deptVal = document.getElementById('filterDepartment').value.toLowerCase().trim();
+            const riskVal = document.getElementById('filterRisk').value.trim();
+            const feeVal = document.getElementById('filterFee').value.toLowerCase().trim();
+
+            const tableBody = document.getElementById('studentsTableBody');
+            const rows = tableBody.getElementsByTagName('tr');
+            let visibleCount = 0;
+
+            for (let row of rows) {
+                const text = row.textContent.toLowerCase();
+                const deptCell = row.cells[2] ? row.cells[2].textContent.toLowerCase() : '';
+                const feeCell = row.cells[7] ? row.cells[7].textContent.toLowerCase() : '';
+                const riskBadge = row.cells[8] ? row.cells[8].textContent : '';
+
+                const matchesSearch = !searchVal || text.includes(searchVal);
+                const matchesDept = !deptVal || deptCell.includes(deptVal);
+                const matchesFee = !feeVal || feeCell.includes(feeVal);
+                
+                let matchesRisk = true;
+                if (riskVal === 'high') {
+                    matchesRisk = riskBadge.includes('High Risk');
+                } else if (riskVal === 'safe') {
+                    matchesRisk = riskBadge.includes('On Track');
+                }
+
+                if (matchesSearch && matchesDept && matchesFee && matchesRisk) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+
+            document.getElementById('visibleCountBadge').textContent = `Showing ${visibleCount} students`;
+            const emptyState = document.getElementById('noResultsState');
+            if (visibleCount === 0) {
+                emptyState.classList.remove('d-none');
+            } else {
+                emptyState.classList.add('d-none');
+            }
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('filterDepartment').value = '';
+            document.getElementById('filterRisk').value = '';
+            document.getElementById('filterFee').value = '';
+            applyFilters();
+        }
+
+        // AI Prediction Simulator Execution
+        async function runAiPrediction() {
+            const gpa = parseFloat(document.getElementById('simGpa').value);
+            const att = parseFloat(document.getElementById('simAttendance').value);
+            const clicks = parseInt(document.getElementById('simClicks').value);
+            const assignments = parseInt(document.getElementById('simAssignments').value);
+            const feeStatus = document.getElementById('simFeeStatus').value;
+
+            if (isNaN(gpa) || isNaN(att) || isNaN(clicks) || isNaN(assignments)) {
+                showToast("Please enter valid numeric values for all required fields.", "error");
+                return;
+            }
+
+            const btn = document.getElementById('btnRunPrediction');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Inference running...';
+
+            try {
+                const response = await fetch('/api/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        gpa: gpa,
+                        attendance: att,
+                        clicks: clicks,
+                        assignments: assignments,
+                        assignments_total: 8,
+                        fee_status: feeStatus
+                    })
+                });
+
+                const data = await response.json();
+                btn.disabled = false;
+                btn.innerHTML = '<i class="bi bi-lightning-charge-fill text-warning"></i> Run AI Model Inference';
+
+                if (!response.ok || !data.success) {
+                    showToast(data.error || "Prediction request failed.", "error");
+                    return;
+                }
+
+                // Render result
+                const container = document.getElementById('simResultContainer');
+                const badge = document.getElementById('simRiskBadge');
+                const recText = document.getElementById('simRecommendationText');
+                const probText = document.getElementById('simProbabilityText');
+                const gauge = document.getElementById('simRiskGauge');
+                const interventionsList = document.getElementById('simInterventionsList');
+
+                container.classList.remove('d-none');
+                badge.className = `badge fs-6 px-3 py-2 bg-${data.badge_class}`;
+                badge.textContent = data.risk_level;
+                recText.textContent = data.recommendation;
+                
+                const prob = data.probability !== null ? data.probability : (data.risk_flag === 1 ? 92 : 12);
+                probText.textContent = `${prob}%`;
+                gauge.style.width = `${Math.min(Math.max(prob, 5), 100)}%`;
+                gauge.style.backgroundColor = prob >= 60 ? '#dc2626' : (prob >= 35 ? '#f59e0b' : '#10b981');
+
+                interventionsList.innerHTML = '';
+                (data.interventions || []).forEach(item => {
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item d-flex align-items-start gap-2 px-0 py-2';
+                    li.innerHTML = `
+                        <i class="bi bi-${item.icon} text-${item.severity === 'Critical' ? 'danger' : (item.severity === 'Warning' ? 'warning' : 'success')} fs-5 mt-1"></i>
+                        <div>
+                            <strong>[${item.category}]</strong>: ${item.action}
+                        </div>
+                    `;
+                    interventionsList.appendChild(li);
+                });
+
+            } catch (err) {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="bi bi-lightning-charge-fill text-warning"></i> Run AI Model Inference';
+                showToast("Network error executing prediction.", "error");
+            }
+        }
+
+        // View Student Details
+        async function viewStudentDetails(studentId) {
+            try {
+                const response = await fetch(`/api/students/${studentId}`);
+                const data = await response.json();
+                if (!response.ok || !data.success) {
+                    showToast(data.error || "Failed to load student details.", "error");
+                    return;
+                }
+
+                const s = data.student;
+                document.getElementById('detailName').textContent = s.name;
+                document.getElementById('detailId').textContent = s.student_id;
+                document.getElementById('detailDept').textContent = s.department;
+                document.getElementById('detailGpa').textContent = Number(s.gpa).toFixed(2);
+                document.getElementById('detailAtt').textContent = `${Number(s.attendance_pct).toFixed(1)}%`;
+                document.getElementById('detailClicks').textContent = s.lms_clicks;
+                document.getElementById('detailAssignments').textContent = `${s.assignments_submitted} / ${s.assignments_total}`;
+                document.getElementById('detailFeeStatus').textContent = s.fee_status;
+                document.getElementById('detailQual').textContent = s.previous_qualification;
+
+                const badge = document.getElementById('detailRiskBadge');
+                if (s.dropout_risk_flag === 1 || s.attendance_pct < 60) {
+                    badge.className = 'badge px-3 py-2 fs-6 badge-risk-high';
+                    badge.textContent = 'High Dropout Risk';
+                } else {
+                    badge.className = 'badge px-3 py-2 fs-6 badge-risk-safe';
+                    badge.textContent = 'On Track';
+                }
+
+                const list = document.getElementById('detailInterventionsList');
+                list.innerHTML = '';
+                (s.interventions || []).forEach(item => {
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item d-flex align-items-start gap-2 px-0 py-2';
+                    li.innerHTML = `
+                        <i class="bi bi-${item.icon} text-${item.severity === 'Critical' ? 'danger' : (item.severity === 'Warning' ? 'warning' : 'success')} fs-5 mt-1"></i>
+                        <div>
+                            <strong>[${item.category}]</strong>: ${item.action}
+                        </div>
+                    `;
+                    list.appendChild(li);
+                });
+
+                const modal = new bootstrap.Modal(document.getElementById('studentDetailModal'));
+                modal.show();
+            } catch (e) {
+                showToast("Error retrieving student details.", "error");
+            }
+        }
+
+        // Add New Student Handler
+        async function handleAddStudent(e) {
+            e.preventDefault();
+            const payload = {
+                student_id: document.getElementById('addStuId').value.trim(),
+                name: document.getElementById('addName').value.trim(),
+                gender: document.getElementById('addGender').value,
+                department: document.getElementById('addDept').value,
+                previous_qualification: document.getElementById('addQual').value,
+                fee_status: document.getElementById('addFee').value,
+                gpa: parseFloat(document.getElementById('addGpa').value),
+                attendance_pct: parseFloat(document.getElementById('addAtt').value),
+                lms_clicks: parseInt(document.getElementById('addClicks').value),
+                assignments_submitted: parseInt(document.getElementById('addSubmissions').value),
+                assignments_total: 8,
+                course_code: document.getElementById('addCourse').value.trim()
+            };
+
+            try {
+                const response = await fetch('/api/students', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const res = await response.json();
+                if (!response.ok || !res.success) {
+                    showToast(res.error || "Failed to create student.", "error");
+                    return;
+                }
+
+                showToast(`Student ${payload.student_id} added successfully!`, "success");
+                const modal = bootstrap.Modal.getInstance(document.getElementById('addStudentModal'));
+                if (modal) modal.hide();
+                setTimeout(() => window.location.reload(), 800);
+            } catch (err) {
+                showToast("Network error submitting student.", "error");
+            }
+        }
+
+        // Delete Student
+        async function deleteStudent(studentId) {
+            if (!confirm(`Are you sure you want to permanently delete student ${studentId}?`)) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/students/${studentId}`, { method: 'DELETE' });
+                const res = await response.json();
+                if (!response.ok || !res.success) {
+                    showToast(res.error || "Failed to delete student.", "error");
+                    return;
+                }
+
+                showToast(`Student ${studentId} deleted successfully.`, "success");
+                const row = document.getElementById(`row-${studentId}`);
+                if (row) row.remove();
+                applyFilters();
+            } catch (err) {
+                showToast("Network error during deletion.", "error");
+            }
+        }
+
+        // Retrain Model Handler
+        async function retrainModel() {
+            const spinner = document.getElementById('retrainSpinner');
+            const btn = document.getElementById('btnRetrainModel');
+            btn.disabled = true;
+            spinner.className = 'bi bi-arrow-repeat spinner-border spinner-border-sm';
+
+            try {
+                const response = await fetch('/api/retrain', { method: 'POST' });
+                const res = await response.json();
+                btn.disabled = false;
+                spinner.className = 'bi bi-arrow-repeat';
+
+                if (res.success) {
+                    showToast(`Model Retrained! New Accuracy: ${(res.metrics.accuracy * 100).toFixed(1)}%`, "success");
+                    setTimeout(() => window.location.reload(), 1000);
+                } else {
+                    showToast(res.error || "Retraining failed.", "error");
+                }
+            } catch (err) {
+                btn.disabled = false;
+                spinner.className = 'bi bi-arrow-repeat';
+                showToast("Network error retraining model.", "error");
+            }
+        }
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            initCharts();
+
+            // Filters
+            document.getElementById('searchInput').addEventListener('input', applyFilters);
+            document.getElementById('filterDepartment').addEventListener('change', applyFilters);
+            document.getElementById('filterRisk').addEventListener('change', applyFilters);
+            document.getElementById('filterFee').addEventListener('change', applyFilters);
+            document.getElementById('btnResetFilters').addEventListener('click', resetFilters);
+
+            // Simulator
+            document.getElementById('btnRunPrediction').addEventListener('click', runAiPrediction);
+
+            // Add Student
+            document.getElementById('addStudentForm').addEventListener('submit', handleAddStudent);
+
+            // Retrain
+            document.getElementById('btnRetrainModel').addEventListener('click', retrainModel);
+
+            // Delegated table actions
+            document.getElementById('studentsTableBody').addEventListener('click', (e) => {
+                const viewBtn = e.target.closest('.btn-view-student');
+                if (viewBtn) {
+                    viewStudentDetails(viewBtn.dataset.id);
+                    return;
+                }
+                const editBtn = e.target.closest('.btn-edit-student');
+                if (editBtn) {
+                    viewStudentDetails(editBtn.dataset.id);
+                    return;
+                }
+                const delBtn = e.target.closest('.btn-delete-student');
+                if (delBtn) {
+                    deleteStudent(delBtn.dataset.id);
+                    return;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

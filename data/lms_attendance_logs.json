@@ -1,0 +1,1602 @@
+[
+  {
+    "student_id": "STU1001",
+    "course_code": "CS-401",
+    "attendance_pct": 92.5,
+    "lms_clicks": 340,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1002",
+    "course_code": "SE-302",
+    "attendance_pct": 58.0,
+    "lms_clicks": 110,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1003",
+    "course_code": "DS-501",
+    "attendance_pct": 96.0,
+    "lms_clicks": 480,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1004",
+    "course_code": "IT-201",
+    "attendance_pct": 45.0,
+    "lms_clicks": 75,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1005",
+    "course_code": "CS-401",
+    "attendance_pct": 81.0,
+    "lms_clicks": 230,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1006",
+    "course_code": "CY-101",
+    "attendance_pct": 89.0,
+    "lms_clicks": 310,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1007",
+    "course_code": "SE-302",
+    "attendance_pct": 40.0,
+    "lms_clicks": 50,
+    "assignments_submitted": 1,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1008",
+    "course_code": "DS-501",
+    "attendance_pct": 85.0,
+    "lms_clicks": 290,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1009",
+    "course_code": "SE-302",
+    "attendance_pct": 80.2,
+    "lms_clicks": 142,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1010",
+    "course_code": "CS-401",
+    "attendance_pct": 68.4,
+    "lms_clicks": 259,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1011",
+    "course_code": "DS-501",
+    "attendance_pct": 67.6,
+    "lms_clicks": 206,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1012",
+    "course_code": "DS-501",
+    "attendance_pct": 88.7,
+    "lms_clicks": 283,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1013",
+    "course_code": "CY-101",
+    "attendance_pct": 85.5,
+    "lms_clicks": 260,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1014",
+    "course_code": "AI-303",
+    "attendance_pct": 85.1,
+    "lms_clicks": 256,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1015",
+    "course_code": "IT-201",
+    "attendance_pct": 94.6,
+    "lms_clicks": 248,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1016",
+    "course_code": "CS-401",
+    "attendance_pct": 52.7,
+    "lms_clicks": 80,
+    "assignments_submitted": 3,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1017",
+    "course_code": "SE-302",
+    "attendance_pct": 71.2,
+    "lms_clicks": 155,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1018",
+    "course_code": "CS-401",
+    "attendance_pct": 36.7,
+    "lms_clicks": 78,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1019",
+    "course_code": "AI-303",
+    "attendance_pct": 44.2,
+    "lms_clicks": 67,
+    "assignments_submitted": 3,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1020",
+    "course_code": "AI-303",
+    "attendance_pct": 37.9,
+    "lms_clicks": 110,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1021",
+    "course_code": "SE-302",
+    "attendance_pct": 97.7,
+    "lms_clicks": 377,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1022",
+    "course_code": "CS-401",
+    "attendance_pct": 38.4,
+    "lms_clicks": 114,
+    "assignments_submitted": 3,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1023",
+    "course_code": "CY-101",
+    "attendance_pct": 53.6,
+    "lms_clicks": 121,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1024",
+    "course_code": "CS-401",
+    "attendance_pct": 90.5,
+    "lms_clicks": 332,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1025",
+    "course_code": "CS-401",
+    "attendance_pct": 73.3,
+    "lms_clicks": 258,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1026",
+    "course_code": "IT-201",
+    "attendance_pct": 88.0,
+    "lms_clicks": 459,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1027",
+    "course_code": "AI-303",
+    "attendance_pct": 88.5,
+    "lms_clicks": 436,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1028",
+    "course_code": "IT-201",
+    "attendance_pct": 65.3,
+    "lms_clicks": 143,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1029",
+    "course_code": "IT-201",
+    "attendance_pct": 35.1,
+    "lms_clicks": 79,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1030",
+    "course_code": "AI-303",
+    "attendance_pct": 81.1,
+    "lms_clicks": 497,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1031",
+    "course_code": "CY-101",
+    "attendance_pct": 36.5,
+    "lms_clicks": 95,
+    "assignments_submitted": 0,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1032",
+    "course_code": "CS-401",
+    "attendance_pct": 84.7,
+    "lms_clicks": 240,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1033",
+    "course_code": "AI-303",
+    "attendance_pct": 92.3,
+    "lms_clicks": 454,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1034",
+    "course_code": "CY-101",
+    "attendance_pct": 67.3,
+    "lms_clicks": 209,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1035",
+    "course_code": "SE-302",
+    "attendance_pct": 81.8,
+    "lms_clicks": 255,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1036",
+    "course_code": "DS-501",
+    "attendance_pct": 69.8,
+    "lms_clicks": 173,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1037",
+    "course_code": "CY-101",
+    "attendance_pct": 37.5,
+    "lms_clicks": 84,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1038",
+    "course_code": "AI-303",
+    "attendance_pct": 66.9,
+    "lms_clicks": 158,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1039",
+    "course_code": "CY-101",
+    "attendance_pct": 97.1,
+    "lms_clicks": 240,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1040",
+    "course_code": "CY-101",
+    "attendance_pct": 69.0,
+    "lms_clicks": 161,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1041",
+    "course_code": "AI-303",
+    "attendance_pct": 56.9,
+    "lms_clicks": 64,
+    "assignments_submitted": 1,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1042",
+    "course_code": "IT-201",
+    "attendance_pct": 43.2,
+    "lms_clicks": 59,
+    "assignments_submitted": 1,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1043",
+    "course_code": "CS-401",
+    "attendance_pct": 81.7,
+    "lms_clicks": 257,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1044",
+    "course_code": "SE-302",
+    "attendance_pct": 93.8,
+    "lms_clicks": 380,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1045",
+    "course_code": "SE-302",
+    "attendance_pct": 80.7,
+    "lms_clicks": 257,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1046",
+    "course_code": "CS-401",
+    "attendance_pct": 93.7,
+    "lms_clicks": 373,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1047",
+    "course_code": "AI-303",
+    "attendance_pct": 97.9,
+    "lms_clicks": 309,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1048",
+    "course_code": "SE-302",
+    "attendance_pct": 72.5,
+    "lms_clicks": 174,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1049",
+    "course_code": "DS-501",
+    "attendance_pct": 53.2,
+    "lms_clicks": 58,
+    "assignments_submitted": 1,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1050",
+    "course_code": "CS-401",
+    "attendance_pct": 54.4,
+    "lms_clicks": 79,
+    "assignments_submitted": 3,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1051",
+    "course_code": "AI-303",
+    "attendance_pct": 56.7,
+    "lms_clicks": 119,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1052",
+    "course_code": "IT-201",
+    "attendance_pct": 73.6,
+    "lms_clicks": 260,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1053",
+    "course_code": "DS-501",
+    "attendance_pct": 51.9,
+    "lms_clicks": 65,
+    "assignments_submitted": 3,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1054",
+    "course_code": "DS-501",
+    "attendance_pct": 82.9,
+    "lms_clicks": 329,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1055",
+    "course_code": "IT-201",
+    "attendance_pct": 97.2,
+    "lms_clicks": 519,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1056",
+    "course_code": "DS-501",
+    "attendance_pct": 46.3,
+    "lms_clicks": 125,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1057",
+    "course_code": "DS-501",
+    "attendance_pct": 92.9,
+    "lms_clicks": 427,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1058",
+    "course_code": "CS-401",
+    "attendance_pct": 75.9,
+    "lms_clicks": 154,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1059",
+    "course_code": "IT-201",
+    "attendance_pct": 80.0,
+    "lms_clicks": 191,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1060",
+    "course_code": "CS-401",
+    "attendance_pct": 98.2,
+    "lms_clicks": 240,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1061",
+    "course_code": "SE-302",
+    "attendance_pct": 81.1,
+    "lms_clicks": 239,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1062",
+    "course_code": "CY-101",
+    "attendance_pct": 35.7,
+    "lms_clicks": 69,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1063",
+    "course_code": "CS-401",
+    "attendance_pct": 76.6,
+    "lms_clicks": 150,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1064",
+    "course_code": "IT-201",
+    "attendance_pct": 79.4,
+    "lms_clicks": 245,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1065",
+    "course_code": "AI-303",
+    "attendance_pct": 92.4,
+    "lms_clicks": 495,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1066",
+    "course_code": "DS-501",
+    "attendance_pct": 94.3,
+    "lms_clicks": 511,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1067",
+    "course_code": "SE-302",
+    "attendance_pct": 85.3,
+    "lms_clicks": 361,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1068",
+    "course_code": "AI-303",
+    "attendance_pct": 73.1,
+    "lms_clicks": 245,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1069",
+    "course_code": "SE-302",
+    "attendance_pct": 89.0,
+    "lms_clicks": 491,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1070",
+    "course_code": "DS-501",
+    "attendance_pct": 86.0,
+    "lms_clicks": 494,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1071",
+    "course_code": "AI-303",
+    "attendance_pct": 44.7,
+    "lms_clicks": 68,
+    "assignments_submitted": 0,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1072",
+    "course_code": "CS-401",
+    "attendance_pct": 66.7,
+    "lms_clicks": 123,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1073",
+    "course_code": "IT-201",
+    "attendance_pct": 58.3,
+    "lms_clicks": 44,
+    "assignments_submitted": 0,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1074",
+    "course_code": "CY-101",
+    "attendance_pct": 55.6,
+    "lms_clicks": 107,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1075",
+    "course_code": "IT-201",
+    "attendance_pct": 43.2,
+    "lms_clicks": 109,
+    "assignments_submitted": 0,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1076",
+    "course_code": "DS-501",
+    "attendance_pct": 83.0,
+    "lms_clicks": 429,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1077",
+    "course_code": "SE-302",
+    "attendance_pct": 76.7,
+    "lms_clicks": 187,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1078",
+    "course_code": "CY-101",
+    "attendance_pct": 36.9,
+    "lms_clicks": 51,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1079",
+    "course_code": "AI-303",
+    "attendance_pct": 48.3,
+    "lms_clicks": 40,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1080",
+    "course_code": "CY-101",
+    "attendance_pct": 95.9,
+    "lms_clicks": 514,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1081",
+    "course_code": "SE-302",
+    "attendance_pct": 68.1,
+    "lms_clicks": 231,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1082",
+    "course_code": "DS-501",
+    "attendance_pct": 83.1,
+    "lms_clicks": 430,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1083",
+    "course_code": "IT-201",
+    "attendance_pct": 94.7,
+    "lms_clicks": 483,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1084",
+    "course_code": "SE-302",
+    "attendance_pct": 55.5,
+    "lms_clicks": 56,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1085",
+    "course_code": "AI-303",
+    "attendance_pct": 95.2,
+    "lms_clicks": 301,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1086",
+    "course_code": "CS-401",
+    "attendance_pct": 79.1,
+    "lms_clicks": 247,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1087",
+    "course_code": "IT-201",
+    "attendance_pct": 87.3,
+    "lms_clicks": 480,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1088",
+    "course_code": "CY-101",
+    "attendance_pct": 91.2,
+    "lms_clicks": 470,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1089",
+    "course_code": "CY-101",
+    "attendance_pct": 61.5,
+    "lms_clicks": 60,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1090",
+    "course_code": "CS-401",
+    "attendance_pct": 71.6,
+    "lms_clicks": 158,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1091",
+    "course_code": "CY-101",
+    "attendance_pct": 49.2,
+    "lms_clicks": 88,
+    "assignments_submitted": 0,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1092",
+    "course_code": "IT-201",
+    "attendance_pct": 66.4,
+    "lms_clicks": 204,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1093",
+    "course_code": "CY-101",
+    "attendance_pct": 97.5,
+    "lms_clicks": 336,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1094",
+    "course_code": "SE-302",
+    "attendance_pct": 85.6,
+    "lms_clicks": 411,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1095",
+    "course_code": "CY-101",
+    "attendance_pct": 87.3,
+    "lms_clicks": 343,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1096",
+    "course_code": "AI-303",
+    "attendance_pct": 95.3,
+    "lms_clicks": 367,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1097",
+    "course_code": "DS-501",
+    "attendance_pct": 82.0,
+    "lms_clicks": 243,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1098",
+    "course_code": "DS-501",
+    "attendance_pct": 87.5,
+    "lms_clicks": 224,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1099",
+    "course_code": "CY-101",
+    "attendance_pct": 76.5,
+    "lms_clicks": 155,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1100",
+    "course_code": "IT-201",
+    "attendance_pct": 97.3,
+    "lms_clicks": 387,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1101",
+    "course_code": "DS-501",
+    "attendance_pct": 89.2,
+    "lms_clicks": 371,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1102",
+    "course_code": "SE-302",
+    "attendance_pct": 80.3,
+    "lms_clicks": 494,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1103",
+    "course_code": "IT-201",
+    "attendance_pct": 75.5,
+    "lms_clicks": 203,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1104",
+    "course_code": "AI-303",
+    "attendance_pct": 80.7,
+    "lms_clicks": 472,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1105",
+    "course_code": "IT-201",
+    "attendance_pct": 81.1,
+    "lms_clicks": 227,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1106",
+    "course_code": "IT-201",
+    "attendance_pct": 88.4,
+    "lms_clicks": 340,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1107",
+    "course_code": "CS-401",
+    "attendance_pct": 96.1,
+    "lms_clicks": 452,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1108",
+    "course_code": "CS-401",
+    "attendance_pct": 40.5,
+    "lms_clicks": 127,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1109",
+    "course_code": "CY-101",
+    "attendance_pct": 38.5,
+    "lms_clicks": 62,
+    "assignments_submitted": 1,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1110",
+    "course_code": "SE-302",
+    "attendance_pct": 94.1,
+    "lms_clicks": 489,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1111",
+    "course_code": "DS-501",
+    "attendance_pct": 65.7,
+    "lms_clicks": 253,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1112",
+    "course_code": "IT-201",
+    "attendance_pct": 80.5,
+    "lms_clicks": 138,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1113",
+    "course_code": "CS-401",
+    "attendance_pct": 77.1,
+    "lms_clicks": 217,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1114",
+    "course_code": "CY-101",
+    "attendance_pct": 52.7,
+    "lms_clicks": 128,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1115",
+    "course_code": "SE-302",
+    "attendance_pct": 54.7,
+    "lms_clicks": 70,
+    "assignments_submitted": 3,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1116",
+    "course_code": "CS-401",
+    "attendance_pct": 94.0,
+    "lms_clicks": 286,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1117",
+    "course_code": "DS-501",
+    "attendance_pct": 44.5,
+    "lms_clicks": 103,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1118",
+    "course_code": "CY-101",
+    "attendance_pct": 56.8,
+    "lms_clicks": 101,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1119",
+    "course_code": "CS-401",
+    "attendance_pct": 70.8,
+    "lms_clicks": 121,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1120",
+    "course_code": "CS-401",
+    "attendance_pct": 87.1,
+    "lms_clicks": 452,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1121",
+    "course_code": "CY-101",
+    "attendance_pct": 80.9,
+    "lms_clicks": 261,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1122",
+    "course_code": "IT-201",
+    "attendance_pct": 86.6,
+    "lms_clicks": 276,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1123",
+    "course_code": "CS-401",
+    "attendance_pct": 40.5,
+    "lms_clicks": 57,
+    "assignments_submitted": 1,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1124",
+    "course_code": "CS-401",
+    "attendance_pct": 71.5,
+    "lms_clicks": 178,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1125",
+    "course_code": "AI-303",
+    "attendance_pct": 96.4,
+    "lms_clicks": 514,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1126",
+    "course_code": "CS-401",
+    "attendance_pct": 60.6,
+    "lms_clicks": 88,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1127",
+    "course_code": "IT-201",
+    "attendance_pct": 41.0,
+    "lms_clicks": 129,
+    "assignments_submitted": 1,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1128",
+    "course_code": "CY-101",
+    "attendance_pct": 92.3,
+    "lms_clicks": 295,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1129",
+    "course_code": "SE-302",
+    "attendance_pct": 89.4,
+    "lms_clicks": 508,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1130",
+    "course_code": "IT-201",
+    "attendance_pct": 69.7,
+    "lms_clicks": 134,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1131",
+    "course_code": "IT-201",
+    "attendance_pct": 92.2,
+    "lms_clicks": 266,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1132",
+    "course_code": "AI-303",
+    "attendance_pct": 81.3,
+    "lms_clicks": 235,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1133",
+    "course_code": "AI-303",
+    "attendance_pct": 88.3,
+    "lms_clicks": 487,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1134",
+    "course_code": "IT-201",
+    "attendance_pct": 86.4,
+    "lms_clicks": 388,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1135",
+    "course_code": "AI-303",
+    "attendance_pct": 97.4,
+    "lms_clicks": 378,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1136",
+    "course_code": "IT-201",
+    "attendance_pct": 77.6,
+    "lms_clicks": 254,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1137",
+    "course_code": "CS-401",
+    "attendance_pct": 98.0,
+    "lms_clicks": 468,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1138",
+    "course_code": "DS-501",
+    "attendance_pct": 58.9,
+    "lms_clicks": 34,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1139",
+    "course_code": "SE-302",
+    "attendance_pct": 56.8,
+    "lms_clicks": 51,
+    "assignments_submitted": 3,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1140",
+    "course_code": "DS-501",
+    "attendance_pct": 78.7,
+    "lms_clicks": 240,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1141",
+    "course_code": "IT-201",
+    "attendance_pct": 67.8,
+    "lms_clicks": 171,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1142",
+    "course_code": "AI-303",
+    "attendance_pct": 79.4,
+    "lms_clicks": 151,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1143",
+    "course_code": "IT-201",
+    "attendance_pct": 95.5,
+    "lms_clicks": 398,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1144",
+    "course_code": "DS-501",
+    "attendance_pct": 35.8,
+    "lms_clicks": 42,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1145",
+    "course_code": "DS-501",
+    "attendance_pct": 51.6,
+    "lms_clicks": 40,
+    "assignments_submitted": 0,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1146",
+    "course_code": "SE-302",
+    "attendance_pct": 95.1,
+    "lms_clicks": 454,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1147",
+    "course_code": "CS-401",
+    "attendance_pct": 86.7,
+    "lms_clicks": 512,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1148",
+    "course_code": "CS-401",
+    "attendance_pct": 45.4,
+    "lms_clicks": 77,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1149",
+    "course_code": "DS-501",
+    "attendance_pct": 44.0,
+    "lms_clicks": 35,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1150",
+    "course_code": "SE-302",
+    "attendance_pct": 95.0,
+    "lms_clicks": 241,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1151",
+    "course_code": "DS-501",
+    "attendance_pct": 80.9,
+    "lms_clicks": 389,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1152",
+    "course_code": "AI-303",
+    "attendance_pct": 93.1,
+    "lms_clicks": 408,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1153",
+    "course_code": "CY-101",
+    "attendance_pct": 86.2,
+    "lms_clicks": 371,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1154",
+    "course_code": "DS-501",
+    "attendance_pct": 75.5,
+    "lms_clicks": 231,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1155",
+    "course_code": "DS-501",
+    "attendance_pct": 94.8,
+    "lms_clicks": 237,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1156",
+    "course_code": "IT-201",
+    "attendance_pct": 87.0,
+    "lms_clicks": 447,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1157",
+    "course_code": "IT-201",
+    "attendance_pct": 94.0,
+    "lms_clicks": 475,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1158",
+    "course_code": "AI-303",
+    "attendance_pct": 59.7,
+    "lms_clicks": 92,
+    "assignments_submitted": 1,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1159",
+    "course_code": "CS-401",
+    "attendance_pct": 69.9,
+    "lms_clicks": 196,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1160",
+    "course_code": "SE-302",
+    "attendance_pct": 48.3,
+    "lms_clicks": 76,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1161",
+    "course_code": "CS-401",
+    "attendance_pct": 49.2,
+    "lms_clicks": 128,
+    "assignments_submitted": 3,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1162",
+    "course_code": "AI-303",
+    "attendance_pct": 67.2,
+    "lms_clicks": 166,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1163",
+    "course_code": "CS-401",
+    "attendance_pct": 93.5,
+    "lms_clicks": 397,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1164",
+    "course_code": "DS-501",
+    "attendance_pct": 75.9,
+    "lms_clicks": 159,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1165",
+    "course_code": "CS-401",
+    "attendance_pct": 42.1,
+    "lms_clicks": 56,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1166",
+    "course_code": "AI-303",
+    "attendance_pct": 87.7,
+    "lms_clicks": 452,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1167",
+    "course_code": "IT-201",
+    "attendance_pct": 85.9,
+    "lms_clicks": 383,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1168",
+    "course_code": "CY-101",
+    "attendance_pct": 88.5,
+    "lms_clicks": 292,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1169",
+    "course_code": "IT-201",
+    "attendance_pct": 54.5,
+    "lms_clicks": 54,
+    "assignments_submitted": 1,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1170",
+    "course_code": "CS-401",
+    "attendance_pct": 68.7,
+    "lms_clicks": 210,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1171",
+    "course_code": "CY-101",
+    "attendance_pct": 72.3,
+    "lms_clicks": 187,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1172",
+    "course_code": "CS-401",
+    "attendance_pct": 74.4,
+    "lms_clicks": 138,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1173",
+    "course_code": "CY-101",
+    "attendance_pct": 56.5,
+    "lms_clicks": 73,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1174",
+    "course_code": "CY-101",
+    "attendance_pct": 93.6,
+    "lms_clicks": 462,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1175",
+    "course_code": "DS-501",
+    "attendance_pct": 43.1,
+    "lms_clicks": 73,
+    "assignments_submitted": 4,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1176",
+    "course_code": "IT-201",
+    "attendance_pct": 87.9,
+    "lms_clicks": 377,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1177",
+    "course_code": "CY-101",
+    "attendance_pct": 75.7,
+    "lms_clicks": 217,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1178",
+    "course_code": "AI-303",
+    "attendance_pct": 82.9,
+    "lms_clicks": 324,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1179",
+    "course_code": "CY-101",
+    "attendance_pct": 90.0,
+    "lms_clicks": 380,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1180",
+    "course_code": "AI-303",
+    "attendance_pct": 69.7,
+    "lms_clicks": 196,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1181",
+    "course_code": "AI-303",
+    "attendance_pct": 80.9,
+    "lms_clicks": 190,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1182",
+    "course_code": "IT-201",
+    "attendance_pct": 42.8,
+    "lms_clicks": 66,
+    "assignments_submitted": 0,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1183",
+    "course_code": "SE-302",
+    "attendance_pct": 75.5,
+    "lms_clicks": 181,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1184",
+    "course_code": "AI-303",
+    "attendance_pct": 89.0,
+    "lms_clicks": 290,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1185",
+    "course_code": "IT-201",
+    "attendance_pct": 97.3,
+    "lms_clicks": 265,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1186",
+    "course_code": "SE-302",
+    "attendance_pct": 55.2,
+    "lms_clicks": 67,
+    "assignments_submitted": 0,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1187",
+    "course_code": "CY-101",
+    "attendance_pct": 90.3,
+    "lms_clicks": 472,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1188",
+    "course_code": "CS-401",
+    "attendance_pct": 77.2,
+    "lms_clicks": 123,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1189",
+    "course_code": "AI-303",
+    "attendance_pct": 71.9,
+    "lms_clicks": 229,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1190",
+    "course_code": "AI-303",
+    "attendance_pct": 60.3,
+    "lms_clicks": 30,
+    "assignments_submitted": 2,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1191",
+    "course_code": "CY-101",
+    "attendance_pct": 66.1,
+    "lms_clicks": 150,
+    "assignments_submitted": 6,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1192",
+    "course_code": "AI-303",
+    "attendance_pct": 71.2,
+    "lms_clicks": 176,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1193",
+    "course_code": "IT-201",
+    "attendance_pct": 77.9,
+    "lms_clicks": 175,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1194",
+    "course_code": "CY-101",
+    "attendance_pct": 57.4,
+    "lms_clicks": 94,
+    "assignments_submitted": 1,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1195",
+    "course_code": "IT-201",
+    "attendance_pct": 80.3,
+    "lms_clicks": 234,
+    "assignments_submitted": 5,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1196",
+    "course_code": "IT-201",
+    "attendance_pct": 95.3,
+    "lms_clicks": 231,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1197",
+    "course_code": "CS-401",
+    "attendance_pct": 98.9,
+    "lms_clicks": 255,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1198",
+    "course_code": "SE-302",
+    "attendance_pct": 58.5,
+    "lms_clicks": 78,
+    "assignments_submitted": 3,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1199",
+    "course_code": "CY-101",
+    "attendance_pct": 95.9,
+    "lms_clicks": 231,
+    "assignments_submitted": 8,
+    "assignments_total": 8
+  },
+  {
+    "student_id": "STU1200",
+    "course_code": "SE-302",
+    "attendance_pct": 97.8,
+    "lms_clicks": 277,
+    "assignments_submitted": 7,
+    "assignments_total": 8
+  }
+]
